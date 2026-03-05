@@ -28,8 +28,9 @@ export default function Home() {
             </h2>
 
             <p className="mt-4 text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-xl">
-              I craft modern, responsive, and high-performance web interfaces 
-              using React, Tailwind CSS, and clean UI/UX principles.
+              I am an IT professional specializing in front-end development and quality assurance testing. 
+              I build responsive and user-friendly web interfaces while ensuring applications function correctly through thorough testing and debugging. 
+              I am passionate about improving user experience by writing clean code and identifying issues before deployment.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row sm:items-center gap-4">
