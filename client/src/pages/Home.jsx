@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import AnimatedSection from '../components/AnimatedSection';
 
 export default function Home() {
-  const imageUrl = "/pfp.jpg"; 
-  const cvFile = "/cv.pdf";
+  const base = import.meta.env.BASE_URL;
+  const imageUrl = `${base}pfp.jpg`;
+  const cvFile = `${base}cvJohnMichaelG.Andrin.pdf`;
 
   return (
     <section className="relative pt-28 pb-16 px-6 md:px-12 lg:px-24 text-center overflow-hidden">
@@ -45,14 +46,14 @@ export default function Home() {
               >
                 Contact Me
               </Link>
-             <Link
-                 to="/cvJohnMichaelG.Andrin.pdf"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                  className="px-8 py-3 border-2 border-primary text-primary rounded-full shadow-lg transition-all duration-300"
-                  >
-                 View CV
-                </Link>
+              <a
+                href={cvFile}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 border-2 border-primary text-primary rounded-full shadow-lg transition-all duration-300"
+              >
+                View CV
+              </a>
             </div>
           </div>
 

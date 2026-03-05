@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import AnimatedSection from "../components/AnimatedSection";
-import api from "../services/api";
+import emailjs from "@emailjs/browser";
 import Swal from "sweetalert2";
 import { motion } from "framer-motion";
+
+// TODO: Replace these with your actual EmailJS IDs from https://www.emailjs.com/
+const EMAILJS_SERVICE_ID = "service_2wgre4x";
+const EMAILJS_TEMPLATE_ID = "template_aqfi5rl";
+const EMAILJS_PUBLIC_KEY = "3E8ckmV7fQNO7kEiN";
+
+emailjs.init(EMAILJS_PUBLIC_KEY);
 
 export default function Contact() {
 
@@ -25,12 +32,20 @@ export default function Contact() {
     setLoading(true);
 
     try {
-      const res = await api.post("/contact", form);
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: form.name,
+          message: form.message,
+          time: new Date().toLocaleString(),
+        }
+      );
 
       Swal.fire({
         icon: "success",
         title: "Message Sent!",
-        text: res.data.message,
+        text: "Your message has been sent successfully!",
         timer: 2000,
         showConfirmButton: false
       });
@@ -41,11 +56,12 @@ export default function Contact() {
       });
 
     } catch (err) {
+      console.error("EmailJS Error:", err);
 
       Swal.fire({
         icon: "error",
         title: "Oops!",
-        text: err.response?.data?.error || "Submission failed"
+        text: err?.text || "Failed to send message. Please try again later."
       });
 
     } finally {

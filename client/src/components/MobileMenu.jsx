@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
@@ -27,14 +28,14 @@ export default function MobileMenu({ open, onClose, links }) {
             </button>
             <nav className="flex flex-col space-y-6">
               {links.map(link => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.to}
+                  to={link.to}
                   onClick={onClose}
                   className="text-lg font-medium text-black dark:text-white"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
             </nav>
           </motion.div>

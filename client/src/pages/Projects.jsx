@@ -1,11 +1,13 @@
 import React from 'react';
 import AnimatedSection from '../components/AnimatedSection';
 
+const base = import.meta.env.BASE_URL;
+
 const projects = [
   {
     id: 1,
     title: "Banco De Cramo",
-    image: "/banco.png",
+    image: `${base}banco.png`,
     description:
       "Developed banking-related applications for academic purposes to manage customer accounts and transactions.Implemented core Java functionalities to improve system reliability and data management.",
     tech: ["Java", "JavaDB"],
@@ -13,7 +15,7 @@ const projects = [
   {
     id: 2,
     title: "Probare",
-    image: "/probare.png",
+    image: `${base}probare.png`,
     description:
       "Designed and developed a school-based web and mobile platform for teachers to create quizzes for students.Enabled real-time grading and results reporting for improved learning feedback.Ensured responsive design and functionality across web and mobile devices.Responsive e-commerce interface with product filtering, cart system, and smooth UI interactions.",
     tech: ["HTML", "CSS", "JavaScript", "Android Studio Java", "Firebase"],
@@ -21,7 +23,7 @@ const projects = [
   {
     id: 3,
     title: "JAHS Telecon Employee Web-Portal and Deployment Application",
-    image: "/jahs.png",
+    image: `${base}jahs.png`,
     description:
       "Developed a private web and mobile application for JAHS Telecon to manage employees, team leaders, and admin operations.Implemented real-time tracking of salaries, inventories, attendance, and deployment locations using a map feature.     Ensured seamless user interface and experience for multiple roles within the application.",
     tech: ["Captone Project","HTML", "CSS", "JavaScript", "Android Studio Java", "Firebase"],
@@ -29,7 +31,7 @@ const projects = [
   {
     id: 4,
     title: "BulSU PMES",
-    image: "/pmes.png",
+    image: `${base}pmes.png`,
     description:
       "A system to assess and improve the performance of individual offices and departments within an organization. Developed a web application for the Performance Management and Evaluation System (PMES) to track and evaluate the performance of various offices and departments within an organization of Bulacan State University.",
     tech: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS"],
@@ -37,7 +39,7 @@ const projects = [
   {
     id: 5,
     title: "BulSU PIPS 2.0",
-    image: "/pips.png",
+    image: `${base}pips.png`,
     description:
       "PDO Investment Programming System. A centralized platform for planning and investment programming.",
     tech: ["MongoDB", "ExpressJS", "ReactJS", "NodeJS", "Tailwind CSS"],
@@ -45,7 +47,7 @@ const projects = [
     {
     id: 6,
     title: "Portfolio Website",
-    image: "/portfolio.png",
+    image: `${base}portfolio.png`,
     description:
       "A personal portfolio website to showcase my skills, projects, and experience as a front-end developer. Built with React and Tailwind CSS, featuring a modern design and smooth animations.",
     tech: ["React", "Tailwind CSS", "Framer Motion"],

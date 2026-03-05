@@ -45,7 +45,7 @@ export default function Education() {
 
                 <div className="w-36 h-36 mx-auto md:mx-0 rounded-2xl overflow-hidden border-4 border-primary">
                   <img
-                    src="/meneses.png"
+                    src={`${import.meta.env.BASE_URL}meneses.png`}
                     alt="Bulacan State University"
                     className="w-full h-full object-cover"
                   />
@@ -121,7 +121,7 @@ export default function Education() {
 
                 <div className="w-32 h-32 rounded-2xl overflow-hidden border-4 border-primary mx-auto md:mx-0">
                   <img
-                    src="/csbyte.jpg"
+                    src={`${import.meta.env.BASE_URL}csbyte.jpg`}
                     alt="CS BYTE"
                     className="w-full h-full object-cover"
                   />

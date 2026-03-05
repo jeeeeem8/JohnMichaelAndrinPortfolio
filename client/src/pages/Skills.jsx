@@ -111,10 +111,10 @@ export default function Skills() {
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="cursor-pointer rounded-xl shadow-lg border border-primary/20 overflow-hidden bg-white dark:bg-gray-900 p-4"
-              onClick={() => setSelectedImage('/fccRWD.png')}
+              onClick={() => setSelectedImage(`${import.meta.env.BASE_URL}fccRWD.png`)}
             >
               <img
-                src="/fccRWD.png"
+                src={`${import.meta.env.BASE_URL}fccRWD.png`}
                 alt="Certification RWD"
                 className="w-full h-auto object-contain rounded-lg"
               />
@@ -124,10 +124,10 @@ export default function Skills() {
             <motion.div
               whileHover={{ scale: 1.02 }}
               className="cursor-pointer rounded-xl shadow-lg border border-primary/20 overflow-hidden bg-white dark:bg-gray-900 p-4"
-              onClick={() => setSelectedImage('/fccJS.png')}
+              onClick={() => setSelectedImage(`${import.meta.env.BASE_URL}fccJS.png`)}
             >
               <img
-                src="/fccJS.png"
+                src={`${import.meta.env.BASE_URL}fccJS.png`}
                 alt="Certification JS"
                 className="w-full h-auto object-contain rounded-lg"
               />
