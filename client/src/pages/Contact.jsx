@@ -181,6 +181,10 @@ export default function Contact() {
 
             <div className="space-y-4">
 
+               <div className="text-xl w-full p-4 border border-primary rounded-xl text-primary text-center">
+                 Gmail : jmandrin09@gmail.com
+              </div>
+
               <div className="text-xl w-full p-4 border border-primary rounded-xl text-primary text-center">
                  Contact No. (+63) 960-219-0334
               </div>
